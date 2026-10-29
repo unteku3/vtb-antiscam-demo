@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a2896">
+  <meta name="description" content="Интерактивный UX-концепт ВТБ Антискам: проверка переписки перед переводом. Демонстрационные данные.">
+  <title>ВТБ Антискам — интерактивный прототип</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true"><defs>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+<symbol id="i-back" viewBox="0 0 24 24"><path d="m14 5-7 7 7 7"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+<symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8.5 11.5 2.5 2.5 4.5-5"/></symbol>
+<symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 3V6a2 2 0 0 1 2-2Z"/><path d="M7 9h10M7 13h6"/></symbol>
+<symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m3 16 5-5 5 5 3-3 5 5"/><circle cx="16" cy="8" r="1.5"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.5"/></symbol>
+<symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-6v-7H9v7H3Z"/></symbol>
+<symbol id="i-wallet" viewBox="0 0 24 24"><path d="M4 6h15a2 2 0 0 1 2 2v12H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h14v2"/><path d="M21 11h-6v5h6m-3-2.5h.01"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></symbol>
+<symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 9a6 6 0 1 1 12 0v6l2 3H4l2-3V9m4 12h4"/></symbol>
+<symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+<symbol id="i-qr" viewBox="0 0 24 24"><path d="M3 9V3h6m6 0h6v6M3 15v6h6m6 0h6v-6"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><rect x="7" y="14" width="3" height="3"/><path d="M14 14h3v3h-3Z"/></symbol>
+<symbol id="i-edit" viewBox="0 0 24 24"><path d="m4 16 12-12 4 4L8 20H4v-4Zm9-9 4 4"/></symbol>
+<symbol id="i-lock" viewBox="0 0 24 24"><rect x="5" y="10" width="14" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 4v3"/></symbol>
+<symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3 2 21h20L12 3Z"/><path d="M12 9v5m0 3v.1"/></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="m7 3 3 5-3 3c1.5 3 3 4.5 6 6l3-3 5 3-2 4C9 22 2 15 3 5l4-2Z"/></symbol>
+<symbol id="i-file" viewBox="0 0 24 24"><path d="M5 3h9l5 5v13H5V3Zm9 0v6h5M8 13h8m-8 4h6"/></symbol>
+<symbol id="i-repeat" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4M4 11V7h16M8 21l-4-4 4-4m12 0v4H4"/></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path d="m3 3 19 9-19 9 4-9-4-9Zm4 9h15"/></symbol>
+<symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="13" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+<symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.7 6.3L21 12l-6.3 2.7L12 21l-2.7-6.3L3 12l6.3-2.7L12 3Z"/></symbol>
+</defs></svg>
+<header class="studio-header">
+  <div class="identity"><span class="vtb-logo"><i></i><b>ВТБ</b></span><span class="brand-divider"></span><span>Антискам <small>UX-концепт</small></span></div>
+  <div class="header-tools"><span class="demo-pill"><span></span>Интерактивный прототип</span><button class="quiet" data-action="about">О концепте <svg class="icon"><use href="#i-info"/></svg></button></div>
+</header>
+<main class="studio">
+  <aside class="scenario-panel">
+    <div class="eyebrow">ВТБ ОНЛАЙН / НОВЫЙ СЦЕНАРИЙ</div>
+    <h1>Разобраться.<br>До перевода.</h1>
+    <p class="intro">Проверка переписки в тот момент,<br>когда деньги ещё на счёте.</p>
+    <div class="scenario-label">Выберите ситуацию</div>
+    <div id="scenario-buttons"></div>
+    <div class="path-title">Путь клиента <button class="text-button" data-action="restart">Сначала <svg class="icon"><use href="#i-repeat"/></svg></button></div>
+    <nav id="steps" aria-label="Экраны прототипа"></nav>
+    <div class="prototype-note"><svg class="icon"><use href="#i-info"/></svg><p>Демонстрационные операции.<br>Не является приложением банка.</p></div>
+  </aside>
+  <section class="phone-stage" aria-label="Интерактивный экран телефона">
+    <div class="device"><div class="device-top"><span>9:41</span><span class="island"></span><span class="status-icons"><svg viewBox="0 0 48 16" width="48" height="16" aria-hidden="true"><path d="M1 11h3v4H1zm5-3h3v7H6zm5-3h3v10h-3zm5-4h3v14h-3" fill="currentColor"/><rect x="27" y="3" width="17" height="10" rx="3" fill="none" stroke="currentColor"/><rect x="29" y="5" width="13" height="6" rx="1" fill="currentColor"/><path d="M46 6v4" stroke="currentColor" stroke-width="2"/></svg></span></div>
+    <div id="app" class="app" aria-live="polite"></div><div class="home-indicator"></div></div>
+    <div class="device-caption"><span class="caption-dot"></span><span id="device-caption">Нажмите «Перевести», чтобы начать</span></div>
+  </section>
+  <aside class="insight-panel"><div class="insight-index">ПРОВЕРКА ПЕРЕД ПЕРЕВОДОМ</div><div id="insight"></div><div class="phase-two"><span class="small-icon"><svg class="icon"><use href="#i-phone"/></svg></span><div><b>Дальше — анализ звонка</b><p>Следующий этап концепции:<br>проверка разговора через<br>партнёрскую телефонию.</p></div></div></aside>
+</main>
+<footer class="studio-footer"><span>CHANGELLENGE CUP MOSCOW 2026</span><span>Прототип по публичным экранам ВТБ Онлайн <button class="text-button" data-action="about">Источники ↗</button></span></footer>
+<div id="modal-root"></div><div id="toast" class="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
