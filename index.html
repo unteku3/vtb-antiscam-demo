@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0a2896">
-  <meta name="description" content="ВТБ Антискам: понятная проверка переписки перед переводом. Пройдите путь клиента в интерактивной демонстрации решения.">
+  <meta name="description" content="ВТБ Антискам: помощь при подозрительном переводе. ИИ разбирает ситуацию, а сотрудник банка проверяет его вывод. Интерактивная демонстрация решения.">
   <title>ВТБ Антискам — демонстрация решения</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="demo.css">
@@ -17,6 +17,7 @@
 <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
 <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 3 8 3v6c0 5-8 9-8 9s-8-4-8-9V6l8-3Z"/><path d="m8.5 11.5 2.5 2.5 4.5-5"/></symbol>
 <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 3V6a2 2 0 0 1 2-2Z"/><path d="M7 9h10M7 13h6"/></symbol>
+<symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="13" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3m-4 0h8"/></symbol>
 <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="m3 16 5-5 5 5 3-3 5 5"/><circle cx="16" cy="8" r="1.5"/></symbol>
 <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v.5"/></symbol>
 <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></symbol>
@@ -46,7 +47,7 @@
     <div class="welcome-copy">
       <div class="welcome-eyebrow"><span></span>ИНТЕРАКТИВНАЯ ДЕМОНСТРАЦИЯ · 2 МИНУТЫ</div>
       <h1 id="welcome-title" tabindex="-1">Помочь распознать обман.<br><em>До перевода денег.</em></h1>
-      <p class="welcome-lead">ВТБ Антискам — AI-помощник внутри банковского приложения. Он сопоставляет переписку с параметрами перевода, объясняет признаки обмана и подсказывает следующий шаг.</p>
+      <p class="welcome-lead">Если банковский ML-алгоритм заметил подозрительный перевод, ВТБ Антискам предложит помощь. ИИ разберёт ситуацию и при риске или сомнении подключит сотрудника, который проверит его вывод.</p>
       <div class="welcome-actions"><button class="welcome-primary" data-action="start-demo" data-scenario="job">Пройти демонстрацию <svg class="icon"><use href="#i-arrow"/></svg></button><a href="#examples" class="welcome-text-link">Другие ситуации ↓</a></div>
       <p class="welcome-caption">Попробуйте сервис в роли клиента. Переписка, реквизиты и результаты анализа демонстрационные.</p>
     </div>
@@ -54,27 +55,28 @@
       <div class="visual-topline"><span class="visual-logo"><svg class="icon"><use href="#i-shield"/></svg>ВТБ Антискам</span><span class="visual-demo">Пример интерфейса</span></div>
       <div class="visual-message"><div class="visual-label">СООБЩЕНИЕ СОБЕСЕДНИКА</div><p>«Чтобы получить выплату,<br>сначала переведите 12 000 ₽»</p></div>
       <div class="visual-connector"><span></span><svg class="icon"><use href="#i-spark"/></svg><span></span></div>
-      <div class="visual-finding"><span class="visual-alert"><svg class="icon"><use href="#i-alert"/></svg></span><div><h2>Есть повод остановиться</h2><p>Вас просят заплатить за получение денег. Помощник объясняет риск и предлагает, что проверить.</p></div></div>
-      <div class="visual-outcome"><svg class="icon"><use href="#i-check"/></svg><span>Понятная причина. Конкретное действие.</span></div>
+      <div class="visual-finding"><span class="visual-alert"><svg class="icon"><use href="#i-alert"/></svg></span><div><h2>Есть повод остановиться</h2><p>Вас просят заплатить за получение денег. Помощник объясняет риск и подключает сотрудника для проверки.</p></div></div>
+      <div class="visual-outcome"><svg class="icon"><use href="#i-check"/></svg><span>Сотрудник уточнит факты и проверит вывод ИИ.</span></div>
     </div>
   </div>
   <section class="welcome-mechanism" aria-labelledby="mechanism-title">
-    <div class="section-heading"><span class="welcome-eyebrow">КАК РАБОТАЕТ РЕШЕНИЕ</span><h2 id="mechanism-title">От сомнения — к понятному решению</h2></div>
+    <div class="section-heading"><span class="welcome-eyebrow">КАК РАБОТАЕТ РЕШЕНИЕ</span><h2 id="mechanism-title">Помощь в момент сомнения</h2></div>
     <ol class="mechanism-grid">
-      <li><span class="mechanism-number">01</span><div><h3>Проверить ситуацию</h3><p>Если перевод вызывает сомнения, клиент открывает помощника прямо в приложении банка.</p></div></li>
-      <li><span class="mechanism-number">02</span><div><h3>Добавить переписку</h3><p>Скриншот или текст дополняют данные о сумме и получателе. Не нужно пересказывать всю историю.</p></div></li>
-      <li><span class="mechanism-number">03</span><div><h3>Понять, что делать</h3><p>Клиент видит причины риска, вопросы для проверки и варианты: отказаться, уточнить или обратиться в банк.</p></div></li>
+      <li><span class="mechanism-number">01</span><div><h3>Банк замечает риск</h3><p>Плашка появляется только при сигнале ML-алгоритма. Без сигнала перевод идёт как обычно. Помощника можно пропустить кнопкой «Пропустить и продолжить».</p></div></li>
+      <li><span class="mechanism-number">02</span><div><h3>Клиент объясняет ситуацию</h3><p>Можно рассказать голосом, написать сообщение или добавить фото переписки. ИИ сопоставит рассказ с суммой и получателем перевода.</p></div></li>
+      <li><span class="mechanism-number">03</span><div><h3>Сотрудник проверяет вывод</h3><p>При риске или нехватке данных ИИ сам подключит сотрудника ВТБ Онлайн с контекстом разговора. Сотрудник задаст вопросы, проверит вывод ИИ и при необходимости исправит его.</p></div></li>
     </ol>
   </section>
   <section id="examples" class="welcome-examples" aria-labelledby="examples-title">
-    <div class="section-heading"><span class="welcome-eyebrow">ТРИ ПРИМЕРА РАБОТЫ ПОМОЩНИКА</span><h2 id="examples-title">Один сервис. Разные ситуации.</h2><p>Каждая история начинается с короткого объяснения. Выберите любую.</p></div>
+    <div class="section-heading"><span class="welcome-eyebrow">ЧЕТЫРЕ ПРИМЕРА ПЕРЕВОДА</span><h2 id="examples-title">Один сервис. Разные ситуации.</h2><p>Посмотрите, когда нужна помощь, а когда перевод проходит без дополнительных шагов.</p></div>
     <div class="example-grid">
       <button class="example-card" data-action="start-demo" data-scenario="job"><span class="example-icon amber"><svg class="icon"><use href="#i-alert"/></svg></span><h3>Подозрительная просьба</h3><p>Собеседник обещает выплату, но сначала требует перевести ему деньги.</p><span class="example-open">Пройти этот пример <svg class="icon"><use href="#i-arrow"/></svg></span></button>
-      <button class="example-card" data-action="start-demo" data-scenario="purchase"><span class="example-icon blue"><svg class="icon"><use href="#i-wallet"/></svg></span><h3>Оплата покупки</h3><p>Клиент договорился с продавцом об осмотре товара и оплате при получении.</p><span class="example-open">Пройти этот пример <svg class="icon"><use href="#i-arrow"/></svg></span></button>
-      <button class="example-card" data-action="start-demo" data-scenario="unclear"><span class="example-icon gray"><svg class="icon"><use href="#i-chat"/></svg></span><h3>Неполная переписка</h3><p>Есть только сумма и реквизиты. Помощнику нужен контекст, чтобы сделать вывод.</p><span class="example-open">Пройти этот пример <svg class="icon"><use href="#i-arrow"/></svg></span></button>
+      <button class="example-card" data-action="start-demo" data-scenario="purchase"><span class="example-icon blue"><svg class="icon"><use href="#i-wallet"/></svg></span><h3>Оплата покупки</h3><p>Банк замечает нового получателя. В переписке об оплате после осмотра ИИ не находит явных признаков обмана.</p><span class="example-open">Пройти этот пример <svg class="icon"><use href="#i-arrow"/></svg></span></button>
+      <button class="example-card" data-action="start-demo" data-scenario="unclear"><span class="example-icon gray"><svg class="icon"><use href="#i-chat"/></svg></span><h3>Неполная переписка</h3><p>Есть только сумма и реквизиты. ИИ подключает сотрудника, чтобы уточнить ситуацию.</p><span class="example-open">Пройти этот пример <svg class="icon"><use href="#i-arrow"/></svg></span></button>
+      <button class="example-card" data-action="start-demo" data-scenario="normal"><span class="example-icon blue"><svg class="icon"><use href="#i-check"/></svg></span><h3>Обычный перевод</h3><p>2 500 ₽ знакомому получателю. ML-алгоритм не находит подозрений, плашка не появляется.</p><span class="example-open">Пройти этот пример <svg class="icon"><use href="#i-arrow"/></svg></span></button>
     </div>
   </section>
-  <div class="welcome-honesty"><svg class="icon"><use href="#i-info"/></svg><p>Это демонстрация пользовательского опыта: результаты примеров подготовлены заранее, AI-модель не подключена. Реальные переводы не выполняются. <button data-action="about">Подробнее о прототипе</button></p></div>
+  <div class="welcome-honesty"><svg class="icon"><use href="#i-info"/></svg><p>Это демонстрация: сигналы ML, выводы ИИ и ответы сотрудника подготовлены заранее. Голосовой сценарий показан готовой расшифровкой, микрофон не включается. Переводы и обращения в банк не выполняются. Свои файлы и текст остаются в браузере и не анализируются. <button data-action="about">Подробнее о прототипе</button></p></div>
 </section>
 <main class="studio" aria-label="Демонстрация пользовательского пути">
   <aside class="scenario-panel">
